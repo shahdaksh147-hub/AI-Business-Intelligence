@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+plotly
+scikit-learn
+xgboost
+prophet
+openpyxl
+streamlit-option-menu
+streamlit-extras
