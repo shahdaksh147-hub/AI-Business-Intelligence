@@ -1,51 +1,135 @@
 import streamlit as st
+
 from streamlit_option_menu import option_menu
 
+from utils.file_loader import load_file
+
+from config import *
+
 st.set_page_config(
-    page_title="AI Business Intelligence",
-    page_icon="📊",
-    layout="wide"
+
+    page_title=APP_NAME,
+
+    page_icon=APP_ICON,
+
+    layout="wide",
+
+    initial_sidebar_state="expanded"
+
 )
 
-st.markdown("""
-<style>
-.main {
-    background-color: #0E1117;
-}
-</style>
-""", unsafe_allow_html=True)
+# ---------------------
 
-st.title("🚀 AI Powered Business Intelligence Platform")
+# CSS
 
-st.markdown("""
-### Features
+# ---------------------
 
-✅ Dashboard
+with open("assets/style.css") as f:
 
-✅ Sales Analytics
+    st.markdown(
 
-✅ Customer Analytics
+        f"<style>{f.read()}</style>",
 
-✅ Forecasting
+        unsafe_allow_html=True
 
-✅ AI Insights
-""")
+    )
+
+# ---------------------
+
+# Title
+
+# ---------------------
+
+st.title("🚀 AI Business Intelligence Platform")
+
+st.caption("Upload any Business Dataset")
+
+# ---------------------
+
+# Upload
+
+# ---------------------
+
+uploaded = st.sidebar.file_uploader(
+
+    "Upload Dataset",
+
+    type=[
+
+        "csv",
+
+        "xlsx",
+
+        "xls",
+
+        "pdf"
+
+    ]
+
+)
+
+if uploaded:
+
+    df = load_file(uploaded)
+
+    st.session_state["df"] = df
+
+    st.success("Dataset Loaded Successfully")
+
+else:
+
+    st.warning("Upload a dataset to continue.")
+
+    st.stop()
+
+# ---------------------
+
+# Sidebar
+
+# ---------------------
 
 selected = option_menu(
-    menu_title=None,
+
+    menu_title="Navigation",
+
     options=[
+
         "Dashboard",
+
         "Sales Analysis",
+
         "Customer Analytics",
+
         "Forecasting",
-        "AI Insights"
+
+        "AI Insights",
+
+        "Reports"
+
     ],
+
     icons=[
+
         "speedometer",
+
         "bar-chart",
+
         "people",
+
         "graph-up",
-        "robot"
+
+        "robot",
+
+        "file-earmark"
+
     ],
-    orientation="horizontal"
+
+    default_index=0
+
+)
+
+st.info(
+
+    "Use the Pages menu on the left to navigate."
+
 )
