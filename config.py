@@ -1,0 +1,35 @@
+# config.py
+
+APP_NAME = "AI Business Intelligence"
+
+APP_ICON = "📊"
+
+AUTHOR = "Daksh Shah"
+
+VERSION = "1.0.0"
+
+PRIMARY_COLOR = "#4CAF50"
+
+BACKGROUND = "#0E1117"
+
+SIDEBAR = "#161A28"
+
+TEXT = "#FFFFFF"
+
+SUCCESS = "#00E676"
+
+WARNING = "#FFC107"
+
+DANGER = "#F44336"
+
+UPLOAD_FOLDER = "uploads"
+
+REPORT_FOLDER = "reports"
+
+MODEL_FOLDER = "models"
+
+DEFAULT_THEME = "dark"
+
+DEFAULT_FORECAST_DAYS = 90
+
+MAX_UPLOAD_SIZE = 500
