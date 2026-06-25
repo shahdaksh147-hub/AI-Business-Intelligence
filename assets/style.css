@@ -1,0 +1,198 @@
+/* ===============================
+   AI Business Intelligence Theme
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body,
+[class*="css"] {
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Background */
+
+.stApp{
+
+background:linear-gradient(
+135deg,
+#0F172A,
+#111827,
+#1E293B
+);
+
+color:white;
+
+}
+
+/* Sidebar */
+
+section[data-testid="stSidebar"]{
+
+background:#111827;
+
+border-right:1px solid #374151;
+
+}
+
+/* Metric Cards */
+
+div[data-testid="metric-container"]{
+
+background:rgba(255,255,255,.05);
+
+padding:18px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+transition:.3s;
+
+}
+
+div[data-testid="metric-container"]:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 20px 40px rgba(0,255,180,.20);
+
+}
+
+/* Buttons */
+
+.stButton>button{
+
+width:100%;
+
+background:#00C853;
+
+color:white;
+
+border-radius:12px;
+
+height:48px;
+
+font-size:17px;
+
+font-weight:600;
+
+border:none;
+
+transition:.3s;
+
+}
+
+.stButton>button:hover{
+
+background:#00E676;
+
+transform:scale(1.02);
+
+}
+
+/* DataFrame */
+
+[data-testid="stDataFrame"]{
+
+border-radius:15px;
+
+overflow:hidden;
+
+}
+
+/* Headers */
+
+h1{
+
+color:#00E5FF;
+
+font-weight:700;
+
+}
+
+h2{
+
+color:white;
+
+}
+
+h3{
+
+color:#00E676;
+
+}
+
+/* File Uploader */
+
+[data-testid="stFileUploader"]{
+
+border:2px dashed #00E676;
+
+border-radius:15px;
+
+padding:20px;
+
+}
+
+/* Tabs */
+
+button[role="tab"]{
+
+font-size:16px;
+
+font-weight:600;
+
+}
+
+/* Success */
+
+.stSuccess{
+
+border-radius:15px;
+
+}
+
+/* Warning */
+
+.stWarning{
+
+border-radius:15px;
+
+}
+
+/* Info */
+
+.stInfo{
+
+border-radius:15px;
+
+}
+
+/* Plotly */
+
+.js-plotly-plot{
+
+border-radius:20px;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00E676;
+
+border-radius:10px;
+
+}
